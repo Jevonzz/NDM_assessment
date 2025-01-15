@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "General Sans", sans-serif;
+  width: 100dvw;
+  overflow-x: hidden;
+  background-color: black;
+  color: white;
+  font-family: "General Sans", sans-serif;
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+}
