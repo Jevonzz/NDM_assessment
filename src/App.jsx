@@ -1,3 +1,4 @@
+import Bonus from "./components/Bonus";
 import Game from "./components/Game";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -11,6 +12,7 @@ function App() {
         <Hero />
         <Game />
         <LiveCasino />
+        <Bonus />
       </div>
     </main>
   );
