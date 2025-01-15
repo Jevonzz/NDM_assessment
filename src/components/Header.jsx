@@ -101,7 +101,7 @@ const Header = () => {
             <div>
               <a
                 className="inline-block text-black hover:text-gray-600 focus:outline-none focus:text-gray-600 dark:text-white dark:hover:text-neutral-300 dark:focus:text-neutral-300 hover:border-b-2 border-red-500 hover:animate-bounce"
-                href="#"
+                href="#bonus"
               >
                 Bonus
               </a>
@@ -109,7 +109,7 @@ const Header = () => {
             <div>
               <a
                 className="inline-block text-black hover:text-gray-600 focus:outline-none focus:text-gray-600 dark:text-white dark:hover:text-neutral-300 dark:focus:text-neutral-300 hover:border-b-2 border-red-500 hover:animate-bounce"
-                href="#"
+                href="#news"
               >
                 Casino News
               </a>
@@ -117,9 +117,9 @@ const Header = () => {
             <div>
               <a
                 className="inline-block text-black hover:text-gray-600 focus:outline-none focus:text-gray-600 dark:text-white dark:hover:text-neutral-300 dark:focus:text-neutral-300 hover:border-b-2 border-red-500 hover:animate-bounce"
-                href="#"
+                href="#reviews"
               >
-                Testimonials
+                Reviews
               </a>
             </div>
           </div>

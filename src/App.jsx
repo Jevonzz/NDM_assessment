@@ -1,5 +1,7 @@
+import Game from "./components/Game";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import LiveCasino from "./components/LiveCasino";
 
 function App() {
   return (
@@ -7,6 +9,8 @@ function App() {
       <div>
         <Header />
         <Hero />
+        <Game />
+        <LiveCasino />
       </div>
     </main>
   );
