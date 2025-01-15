@@ -69,36 +69,101 @@ const Review = () => {
             What Our Players Say
           </h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {reviewData.map((data) => (
-            <div className="flex h-auto" key={data.id}>
-              <div className="flex flex-col bg-white rounded-xl dark:bg-black">
-                <div className="flex-auto p-4 md:p-6">
-                  <p className="text-base italic md:text-lg text-gray-800 dark:text-neutral-200">
-                    "{data.review}"
-                  </p>
-                </div>
+        <div
+          data-hs-carousel='{
+    "loadingClasses": "opacity-0",
+    "dotsItemClasses": "hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-blue-500 dark:hs-carousel-active:border-blue-500",
+    "isAutoPlay": true
+  }'
+          className="relative"
+        >
+          <div className="hs-carousel relative overflow-hidden w-full min-h-[400px] rounded-lg">
+            <div className="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0 w-full h-full">
+              <div className="flex justify-center items-center h-full bg-gray-100 p-6 dark:bg-neutral-900">
+                {reviewData.map((data) => (
+                  <div
+                    className="hs-carousel-slide flex justify-center w-full h-full px-4 md:px-8"
+                    key={data.id}
+                  >
+                    <div className="flex flex-col bg-white rounded-xl dark:bg-black w-full h-full">
+                      <div className="flex-auto p-4 md:p-6">
+                        <p className="text-base italic md:text-lg text-gray-800 dark:text-neutral-200">
+                          "{data.review}"
+                        </p>
+                      </div>
 
-                <div className="p-4 bg-gray-100 rounded-b-xl md:px-7 dark:bg-neutral-800">
-                  <div className="flex items-center gap-x-3">
-                    <div className="shrink-0">
-                      <img
-                        className="size-8 sm:h-[2.875rem] sm:w-[2.875rem] rounded-full"
-                        src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
-                        alt="Avatar"
-                      />
-                    </div>
+                      <div className="p-4 bg-gray-100 rounded-b-xl md:px-7 dark:bg-neutral-800">
+                        <div className="flex items-center gap-x-3">
+                          <div className="shrink-0">
+                            <img
+                              className="h-16 w-16 sm:h-[2.875rem] sm:w-[2.875rem] rounded-full"
+                              src={
+                                data.avatar ||
+                                "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
+                              }
+                              alt="Avatar"
+                            />
+                          </div>
 
-                    <div className="grow">
-                      <p className="text-sm sm:text-base font-semibold text-gray-800 dark:text-neutral-200">
-                        {data.name}
-                      </p>
+                          <div className="grow">
+                            <p className="text-sm sm:text-base font-semibold text-gray-800 dark:text-neutral-200">
+                              {data.name}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
             </div>
-          ))}
+          </div>
+
+          <button
+            type="button"
+            className="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-s-lg dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+          >
+            <span className="text-2xl" aria-hidden="true">
+              <svg
+                className="shrink-0 size-5"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m15 18-6-6 6-6"></path>
+              </svg>
+            </span>
+            <span className="sr-only">Previous</span>
+          </button>
+          <button
+            type="button"
+            className="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-e-lg dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+          >
+            <span className="sr-only">Next</span>
+            <span className="text-2xl" aria-hidden="true">
+              <svg
+                className="shrink-0 size-5"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="m9 18 6-6-6-6"></path>
+              </svg>
+            </span>
+          </button>
+          <div className="hs-carousel-pagination flex justify-center absolute bottom-2 start-0 end-0 space-x-2"></div>
         </div>
         <div className="mt-20 grid gap-6 grid-cols-2 sm:gap-12 lg:grid-cols-3 lg:gap-8">
           {infoData.map((data) => (
