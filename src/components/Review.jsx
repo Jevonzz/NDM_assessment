@@ -62,7 +62,7 @@ const infoData = [
 
 const Review = () => {
   return (
-    <div className="overflow-hidden bg-neutral-900">
+    <div className="overflow-hidden bg-neutral-900" id="reviews">
       <div className="relative max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         <div className="flex-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl text-white font-semibold mb-8">
