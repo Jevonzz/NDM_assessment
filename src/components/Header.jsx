@@ -10,7 +10,7 @@ const Header = () => {
           aria-label="Casino"
         >
           <img
-            src="../../public/casino_logo.png"
+            src="../../public/casino/casino_logo.png"
             width={100}
             height={100}
             alt="Casino Logo"
@@ -84,7 +84,7 @@ const Header = () => {
             <div>
               <a
                 className="relative inline-block text-black focus:outline-none dark:text-white hover:border-b-2 border-red-500 hover:animate-bounce"
-                href="#"
+                href="#home"
                 aria-current="page"
               >
                 Home
@@ -93,7 +93,7 @@ const Header = () => {
             <div>
               <a
                 className="inline-block text-black hover:text-gray-600 focus:outline-none focus:text-gray-600 dark:text-white dark:hover:text-neutral-300 dark:focus:text-neutral-300 hover:border-b-2 border-red-500 hover:animate-bounce"
-                href="#"
+                href="#game"
               >
                 Games
               </a>
