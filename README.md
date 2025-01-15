@@ -12,9 +12,6 @@ To get a local copy up and running follow these simple example steps.
 # Clone the repo
 git clone https://github.com/Jevonzz/NDM_assessment.git
 
-# Navigate to the project directory
-cd nine-dynasty-marketing-assessment
-
 # Install dependencies
 npm install
 
