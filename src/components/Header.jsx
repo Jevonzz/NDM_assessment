@@ -1,4 +1,5 @@
 import React from "react";
+import Modal from "./Modal";
 
 const Header = () => {
   return (
@@ -17,19 +18,8 @@ const Header = () => {
           ></img>
         </a>
         <div className="flex items-center gap-x-1 lg:gap-x-2 ms-auto py-1 lg:ps-6 lg:order-3 lg:col-span-3">
-          <button
-            type="button"
-            className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium text-nowrap rounded-xl bg-white border border-gray-200 text-black hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:hover:bg-white/10 dark:text-white dark:hover:text-white dark:focus:text-white"
-          >
-            Sign in
-          </button>
-          <button
-            type="button"
-            className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium text-nowrap rounded-xl border border-transparent bg-red-700 text-white hover:bg-red-500 focus:outline-none focus:bg-red-500 transition disabled:opacity-50 disabled:pointer-events-none"
-          >
-            Log in
-          </button>
-
+          <Modal buttonName="Register" />
+          <Modal buttonName="Login" />
           <div className="lg:hidden">
             <button
               type="button"
